@@ -3,7 +3,7 @@ CREATE TABLE [dbo].[FGTransaction](
 [W2] [varchar](50) NOT NULL,
 [M01] [varchar](50) NOT NULL,
 [M01001] [varchar](50) NOT NULL,
-[1] [int] NOT NULL, --positive means in stock; negative means out of stock
+[+1] [int] NOT NULL, --positive means in stock; negative means out of stock
 [2020-11-22 01:36] [datetime] NOT NULL, --transaction happening timestamp
 CONSTRAINT [PK_FGTransaction_1] PRIMARY KEY CLUSTERED
 (
