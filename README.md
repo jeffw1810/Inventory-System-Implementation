@@ -1,11 +1,10 @@
-# Inventory-System-Implementation W1
 CREATE TABLE [dbo].[FGTransaction](
-[1] [bigint] IDENTITY(1,1) NOT NULL,
-[W1] [varchar](50) NOT NULL,
-[M01] [varchar](50) NOT NULL,
-[M01001] [varchar](50) NOT NULL,
-[+2] [int] NOT NULL, --positive means in stock; negative means out of stock
-[2020-11-22 01:26] [datetime] NOT NULL, --transaction happening timestamp
+[Seq] [bigint] IDENTITY(1,1) NOT NULL,
+[Warehouse] [varchar](50) NOT NULL,
+[ModelNo] [varchar](50) NOT NULL,
+[SN] [varchar](50) NOT NULL,
+[Quantity] [int] NOT NULL, --positive means in stock; negative means out of stock
+[TrnTime] [datetime] NOT NULL, --transaction happening timestamp
 CONSTRAINT [PK_FGTransaction_1] PRIMARY KEY CLUSTERED
 (
 [Seq] ASC
@@ -18,4 +17,3 @@ GO
 ALTER TABLE [dbo].[FGTransaction] ADD CONSTRAINT [DF_FGTransaction_TrnTime]
 DEFAULT (getdate()) FOR [TrnTime]
 GO
-
