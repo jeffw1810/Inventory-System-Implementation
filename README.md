@@ -18,3 +18,4 @@ GO
 ALTER TABLE [dbo].[FGTransaction] ADD CONSTRAINT [DF_FGTransaction_TrnTime]
 DEFAULT (getdate()) FOR [TrnTime]
 GO
+
